@@ -4,12 +4,14 @@ import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
 import { Footer, Navbar, Sidebar, ThemeSttings } from './components';
-import { EracleStore, Orders, Calender, Employees, Stacked, Pyramid, Customers, Kanban, Area, Bar, Pie, Financials, ColorPicker, ColorMapping, Editor } from './pages';
+import { Area, Bar, Calender, ColorMapping, ColorPicker, Customers, Editor, Employees, EracleStore, Financials, Kanban, Line, Orders, Pie, Pyramid, Stacked } from './pages';
+
+import { useStateContext } from './contexts/ContextProvider';
 
 import './App.css'
 
 const App = () => {
-    const activeMenu = true;
+    const { activeMenu } = useStateContext();
 
     return (
         <div>
@@ -18,7 +20,7 @@ const App = () => {
                     <div className="fixed right-4 bottom-4" style={{ zIndex: '1000'}}>
                         <TooltipComponent content="Settings" position="Top">
                             <button type="button"
-                            classname="text-3xl p-3 hover:drop-shadow-xl hover:bg-light-gray text-white"
+                            className="text-3xl p-3 hover:drop-shadow-xl hover:bg-light-gray text-white"
                             style={{ background: 'blue', borderRadius: '50%'}}>
                                 <FiSettings />
                             </button>
