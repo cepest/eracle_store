@@ -3,8 +3,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
-import { Footer, Navbar, Sidebar, ThemeSttings } from './components';
-import { Area, Bar, Calender, ColorMapping, ColorPicker, Customers, Editor, Employees, EracleStore, Financials, Kanban, Line, Orders, Pie, Pyramid, Stacked } from './pages';
+import { Footer, Navbar, Sidebar, ThemeSettings } from './components';
+import { Area, Bar, Calendar, ColorMapping, ColorPicker, Customers, Editor, Employees, EracleStore, Financials, Kanban, Line, Orders, Pie, Pyramid, Stacked } from './pages';
 
 import { useStateContext } from './contexts/ContextProvider';
 
@@ -40,6 +40,7 @@ const App = () => {
                             <Navbar />
                         </div>
                         <div>
+                            <ThemeSettings />
                             <Routes>
                                 {/* Dashboard */}
                                 <Route path="/" element={<EracleStore />} />
@@ -51,7 +52,7 @@ const App = () => {
                                 <Route path="/customers" element={<Customers />} />
 
                                 {/* Apps */}
-                                <Route path="/calender" element={<Calender />} />
+                                <Route path="/calendar" element={<Calendar />} />
                                 <Route path="/kanban" element={<Kanban />} />
                                 <Route path="/editor" element={<Editor />} />
                                 <Route path="color-picker" element={<ColorPicker />} />
