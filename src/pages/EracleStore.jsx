@@ -7,6 +7,7 @@ import { earningData, SparklineAreaData, ecomPieChartData } from '../data/dummy'
 import { useStateContext } from '../contexts/ContextProvider';
 
 const EracleStore = () => {
+  const { currentColor } = useStateContext();
   return (
     <div className="mt-12">
       <div className="flex flex-wrap lg:flex-nowrap justify-center">
@@ -18,7 +19,7 @@ const EracleStore = () => {
             </div>
           </div>
           <div className="mt-6">          
-            <Button color="white" bgColor="blue" text="Download" borderRadius="10px" size="md" />          
+            <Button color="white" bgColor={currentColor} text="Download" borderRadius="10px" size="md" />          
           </div>
         </div>
         <div className="flex m-3 flex-wrap justify-center gap-1 items-center">
@@ -80,10 +81,10 @@ const EracleStore = () => {
               </div>
               
               <div className="mt-5">
-                <SparkLine currentColor="blue" id="line-sparkLine" type="Line" height="80px" width="250px" data={SparklineAreaData} color="blue" />
+                <SparkLine currentColor={currentColor} id="line-sparkLine" type="Line" height="80px" width="250px" data={SparklineAreaData} color={currentColor} />
               </div>
               <div className="mt-10">
-                <Button color="white" bgColor="blue" text="Dowmload Report" borderRadius="10px" />
+                <Button color="white" bgColor={currentColor} text="Dowmload Report" borderRadius="10px" />
               </div>
             </div>
             <div>
