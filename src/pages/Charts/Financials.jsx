@@ -16,7 +16,7 @@ function filterValue(value) {
 }
 const returnValue = financialChartData.filter(filterValue);
 
-const Financial = () => {
+const Financials = () => {
   const { currentMode } = useStateContext();
 
   return (
@@ -50,4 +50,4 @@ const Financial = () => {
   );
 };
 
-export default Financial;
+export default Financials;
